@@ -1,0 +1,36 @@
+{
+  "name": "blog-created-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next",
+    "devServer": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BosenY/blog-created-next.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BosenY/blog-created-next/issues"
+  },
+  "homepage": "https://github.com/BosenY/blog-created-next#readme",
+  "dependencies": {
+    "express": "^4.15.5",
+    "isomorphic-unfetch": "^2.0.0",
+    "mobx": "^3.3.0",
+    "mobx-react": "^4.3.2",
+    "next": "^3.2.2",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2",
+    "react-markdown": "^2.5.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "mobx-react-devtools": "^4.2.15"
+  }
+}
