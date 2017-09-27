@@ -17,6 +17,8 @@ app.prepare()
         app.render(req, res, actualPage, queryParams) //渲染对应的page
     })
   server.get('*', (req, res) => {
+    // console.log('res111111')
+    // console.log(res)
     return handle(req, res)
   })
 

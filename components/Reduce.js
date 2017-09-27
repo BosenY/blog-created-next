@@ -4,16 +4,17 @@ import {observer, inject} from "mobx-react"
 @observer
 export default class Reduce extends React.Component {
     constructor(props) {
+        console.log(props)
         super(props)
     }
     addCount() {
-        this.props.store.AddCount()
+        this.props.store.CountStore.AddCount()
     }
     reduceCount() {
-        this.props.store.ReduceCount()
+        this.props.store.CountStore.ReduceCount()
     }
     render() {
-        let { count } = this.props.store
+        let { count } = this.props.store.CountStore
         return (
           <div>
           count: {count}

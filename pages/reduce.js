@@ -1,30 +1,35 @@
-import {Provider} from 'mobx-react'
-import {initStore} from '../store'
-import Router from 'next/router'
+import { Provider } from 'mobx-react'
+import store from '../store'
+
 import React from 'react'
 import Reduce from '../components/Reduce'
+import Router from 'next/router'
 
-export default class add extends React.Component {
-    static getInitialProps({req}) {
-        const isServer = !!req
-        const store = initStore(isServer)
-        return {count: store.count, isServer}
-    }
+export default class reduce extends React.Component {
+  static getInitialProps ({ req }) {
+    const isServer = !!req
+    // const store = initStore(isServer)
+    return store
+  }
 
-    constructor(props) {
-        super(props)
-        this.store = initStore(props.isServer, props.count)
-    }
+  constructor (props) {
+    super(props)
+    console.log(props)
+    console.log(111)
+    console.log( store)
+    this.store = store
+  }
 
-    render() {
-        return (
-            <Provider store={this.store}>
-                <div>
-                    <Reduce></Reduce>
-                    <button onClick={() => Router.push('/add')}>go to add</button>
-                </div>
+  render () {
+      console.log(store)
+    return (
+      <Provider store={this.store}>
+      <div>
+      <Reduce></Reduce>
+        <button onClick={() => Router.push('/add')}>go to add</button>
+      </div>
 
-            </Provider>
-        )
-    }
+      </Provider>
+    )
+  }
 }
